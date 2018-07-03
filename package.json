@@ -1,0 +1,41 @@
+{
+  "name": "steem-vote-value",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "6.1.0"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.3",
+    "buffer": "^5.1.0",
+    "config": "^1.30.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.7",
+    "ejs-mate": "^2.3.0",
+    "embedjs": "0.0.10",
+    "express": "^4.16.3",
+    "http-status": "^1.0.1",
+    "moment": "^2.22.1",
+    "morgan": "~1.0.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.17.2",
+    "request": "^2.85.0",
+    "sequelize": "^4.37.4",
+    "sequelize-cli": "^4.0.0",
+    "static-favicon": "~1.0.0",
+    "steem": "^0.7.1",
+    "stylus": "^0.54.5",
+    "underscore": "^1.8.3",
+    "wagner-core": "^0.2.0"
+  }
+}
