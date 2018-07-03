@@ -31,7 +31,6 @@
     "request": "^2.85.0",
     "sequelize": "^4.37.4",
     "sequelize-cli": "^4.0.0",
-    "static-favicon": "~1.0.0",
     "steem": "^0.7.1",
     "stylus": "^0.54.5",
     "underscore": "^1.8.3",
