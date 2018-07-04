@@ -138,7 +138,8 @@ function vote_value(params) {
                          "user": user.name,
                          "steem_power": user.net_steem_power,
                          "voting_power": user.new_voting_power,
-                         "vote_value":  l.toFixed(2)
+                         "vote_value":  l.toFixed(2),
+                         "vote_percent":  n
                         });
             }
             catch(e){
