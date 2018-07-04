@@ -151,12 +151,14 @@ function vote_value(params) {
 }
 
 function getSteemVoteValue(username,vote_percent) {
-    vote_value({"handle":username,"vote_percent":vote_percent})
-    .then(function(result) {
-        return(result);
-    })
-    .catch(function(user_error){
-        return({});
+    return new Promise( function(resolve, reject) {
+        vote_value({"handle":username,"vote_percent":vote_percent})
+        .then(function(result) {
+            resolve(result);
+        })
+        .catch(function(error){
+            reject(error);
+        });
     });
 }
 

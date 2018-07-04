@@ -9,6 +9,14 @@ Git repo: https://github.com/softprodigyofficial/steem-vote-value/
 
 ## Usage
 
-`const getSteemVoteValue = require('steem-vote-value')`
-
-`const vote_value = getSteemVoteValue(<your_steem_handle>,<vote_percent>)`
+const getSteemVoteValue = require('steem-vote-value') <br>
+return new Promise( function(resolve, reject) { <br>
+    getSteemVoteValue('rahulsps','100') <br>
+    .then(function(result) { <br>
+        res.status(HTTPStatus.OK).json({ success: '1', message: "success", data: result }); <br>
+    }) <br>
+    .catch(function(error){ <br>
+        res.status(HTTPStatus.NOT_FOUND).json({ success: '0', message: "failure", data: error }); <br>
+    }); <br>
+}); <br>
+    
