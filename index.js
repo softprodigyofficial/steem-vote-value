@@ -133,6 +133,10 @@ function vote_percent(params) {
                 
                 var l = parseFloat(params.vote_value).toFixed(3);
                 var m = ( l / ( i * o * r * 100 ) );
+                if(m < 1){
+                    m = 1
+                }
+                
                 n = (((50 * m) - 49) * p) / (100 * 100 * t)
                 
                 mod_factor  = 0.01;
@@ -141,13 +145,19 @@ function vote_percent(params) {
                 toadd       = mod_factor - left;
                 n += toadd;
                 
-                resolve({
-                         "user": user.name,
-                         "steem_power": user.net_steem_power,
-                         "voting_power": user.new_voting_power,
-                         "vote_value":  parseFloat(params.vote_value).toFixed(3),
-                         "vote_percent":  parseFloat(n).toFixed(2)
-                        });
+                n = parseFloat(n).toFixed(2)
+                if(n > 100){
+                    n = 100.00;
+                }
+                
+                vote_value({"handle":user.name,"vote_percent":n})
+                .then(function(result) {
+                    resolve(result);
+                })
+                .catch(function(error){
+                    reject(error);
+                });
+                
             }
             catch(e){
                 reject(e);
